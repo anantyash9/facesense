@@ -8,6 +8,7 @@ import numpy as np
 image = cv2.imread('img2.jpg')
 image = cv2.resize(image, (0, 0), fx = 0.4, fy = 0.4)
 
+
 # Create a window
 cv2.namedWindow('image')
 

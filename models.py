@@ -34,3 +34,10 @@ class PhotoRequest(OurBaseModel):
         if isinstance(value, str):
             return cls(**json.loads(value))
         return value
+    class Config:
+        schema_extra = {
+            "example": {
+                "poseThreshold": PoseThreshold(y=0.03,z=0.024),
+                "hsvThreshold" : HSVThreshold(hsvLower=[0,0,98],hsvUpper=[172,113,255],ratio=0.5)
+            }
+        }
